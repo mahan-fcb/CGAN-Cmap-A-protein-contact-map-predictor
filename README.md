@@ -1,1 +1,1 @@
-# CGAN-Cmap-protein-contact-map-prediction-
+# CGAN-Cmap: protein contact map prediction
