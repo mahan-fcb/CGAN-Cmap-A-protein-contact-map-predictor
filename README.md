@@ -46,7 +46,8 @@ python main.py --traintest test
 The result will be saved in  `GANTL/prediction`.
 
 ## Citation 
-
+If you use this works please cite 
+CGAN-Cmap: protein contact map prediction using deep generative adversarial neural networks uploaded in biorxiv: https://www.biorxiv.org/content/10.1101/2022.07.26.501607v1
 ```
 
 ```
