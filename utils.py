@@ -45,11 +45,15 @@ def Delete_Nan(xtrain,ytrain):
 
 
 # load and prepare training images
-def load_real_samples(data_dir):
-    
-    feature_3d = np.load(data_dir+'/LxLx5_sort_train.npy',allow_pickle=True)
-    feature_1d = np.load(data_dir+'/Lx54_sort_train.npy',allow_pickle=True)
-    contact_map = np.load(data_dir+'/contact_sort_train.npy',allow_pickle=True)
+def load_real_samples(cfg, train = True):
+    if train:
+        feature_3d = np.load(cfg.data_root+'/Train_Set/LxLx5_sort_train.npy',allow_pickle=True)
+        feature_1d = np.load(cfg.data_root+'/Train_Set/Lx54_sort_train.npy',allow_pickle=True)
+        contact_map = np.load(cfg.data_root+'/Train_Set/contact_sort_train.npy',allow_pickle=True)
+    else:
+        feature_3d = np.load(cfg.feature_3d,allow_pickle=True)
+        feature_1d = np.load(cfg.feature_1d,allow_pickle=True)
+        contact_map = np.load(cfg.contact_map,allow_pickle=True)
     
     
     return [feature_3d, feature_1d, contact_map]
