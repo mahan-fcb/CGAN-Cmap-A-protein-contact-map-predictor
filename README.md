@@ -1,6 +1,6 @@
 # CGAN_Cmap
 
-This is the code and data for [CGAN-Cmap: protein contact map prediction using deep generative adversarial neural networks]() paper published in . 
+This is the code and data for [CGAN-Cmap: protein contact map prediction using deep generative adversarial neural networks](https://www.biorxiv.org/content/10.1101/2022.07.26.501607v1) paper submitted in Briefings in Bioinformatics. 
 
 ## Code Usage
 
@@ -47,7 +47,17 @@ The result will be saved in  `GANTL/prediction`.
 
 ## Citation 
 If you use this works please cite 
-CGAN-Cmap: protein contact map prediction using deep generative adversarial neural networks uploaded in biorxiv: https://www.biorxiv.org/content/10.1101/2022.07.26.501607v1
+CGAN-Cmap: protein contact map prediction using deep generative adversarial neural networks uploaded in biorxiv:
 ```
-
+@article {Madani2022.07.26.501607,
+	author = {Madani, Mohammad and Behzadi, Mohammad Mahdi and Song, Dongjin and Ilies, Horea and Tarakanova, Anna},
+	title = {CGAN-Cmap: protein contact map prediction using deep generative adversarial neural networks},
+	elocation-id = {2022.07.26.501607},
+	year = {2022},
+	doi = {10.1101/2022.07.26.501607},
+	publisher = {Cold Spring Harbor Laboratory},
+	URL = {https://www.biorxiv.org/content/early/2022/07/28/2022.07.26.501607},
+	eprint = {https://www.biorxiv.org/content/early/2022/07/28/2022.07.26.501607.full.pdf},
+	journal = {bioRxiv}
+}
 ```
