@@ -25,7 +25,7 @@ This is the code and data for [CGAN-Cmap: protein contact map prediction using d
 
 ### Data and Models
 
-The data can be downloaded from this [link](https://drive.google.com/file/d/1jsbmcryO1_e7bsrbAZ9B9Ljhgm5j6U4K/view?usp=sharing). You have to extract that to the data folder ( it would be like `data/`) . To download the pretrained models, you can use this [link](). You have to extract the models under GANTL folder (it would be like `GANTL/model/`). 
+The data can be downloaded from this [link](https://drive.google.com/file/d/1jsbmcryO1_e7bsrbAZ9B9Ljhgm5j6U4K/view?usp=sharing) (Folder includes training, validation and initial test sets ( ready to use for training) and Casp 11, 12, 13, 14, and CAMEO.). You have to extract that to the data folder ( it would be like `data/`) . To download the pretrained models, you can use this [link](). You have to extract the models under GANTL folder (it would be like `GANTL/model/`). 
 
 ### Using Example
 
