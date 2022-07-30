@@ -17,11 +17,13 @@ This is the code and data for [CGAN-Cmap: protein contact map prediction using d
   - Options: 
     - `traintest` which train the model and test that
     - `test` which test the saved model
+- `--test_data`: The type of data set to use. default = initial, options: [initial, CAMEO, casp12,casp13,casp14]
 - `--batch_size`: The batch size for the model training (default = 4)
 - `--n_epoch`: The number of epochs for training (default = 500)
 - `--save_step` : Save models every x epoch (default = 50)
 - `--lr` : Learning rate (default = 2e-4)
 - `--SE_concat` : Number of SE_Concat block used in the generator (default = 3)
+- `--Premodel_name` : Pretrain model name (default = CGAN_Cmap.h5)
 
 ### Data and Models
 
