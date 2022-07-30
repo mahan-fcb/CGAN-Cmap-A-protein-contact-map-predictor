@@ -21,8 +21,22 @@ class ConfigGAN(object):
         self.log_dir = os.path.join(self.exp_dir, 'images')
         self.model_dir = os.path.join(self.exp_dir, 'model')
         self.pred_dir = os.path.join(self.exp_dir, 'prediction')
-        
+        self.pretrain_model = os.path.join(self.model_dir, args.Premodel_name)
             
+        self.test_dir = os.path.join(self.exp_dir, args.test_data)
+        if args.test_data == 'initial':
+            self.feature_3d =  os.path.join(self.test_dir,'LxLx5_test_sort.npy')
+            self.feature_1d =  os.path.join(self.test_dir,'Lx54_test_sort.npy')
+            self.contact_map =  os.path.join(self.test_dir,'contact_sort_test.npy')
+        elif args.test_data == 'CAMEO':
+            self.feature_3d =  os.path.join(self.test_dir,'LxLx5_CAMEO.npy')
+            self.feature_1d =  os.path.join(self.test_dir,'Lx54_CAMEO.npy')
+            self.contact_map =  os.path.join(self.test_dir,'contact_CAMEO.npy')
+        else:
+            self.feature_3d =  os.path.join(self.test_dir,'LxLx5_'+ args.test_data+'.npy')
+            self.feature_1d =  os.path.join(self.test_dir,'Lx54_'+ args.test_data+'.npy')
+            self.contact_map =  os.path.join(self.test_dir,'contact_'+ args.test_data+'.npy')
+
         ensure_dirs([self.log_dir, self.model_dir, self.pred_dir])
 
     def parse(self):
@@ -30,11 +44,13 @@ class ConfigGAN(object):
         parser = argparse.ArgumentParser()
 
         parser.add_argument('--exp_name', type=str, default="CGAN_CMAP", help="name of this experiment")
-
+        parser.add_argument('--Premodel_name', type=str, default="CGAN_Cmap.h5", help="Pretrain model name")
         parser.add_argument('--traintest', type=str, default="traintest", help="options: [traintest, test]")
 
+        parser.add_argument('--test_data', type=str, default="initial", help="options: [initial, CAMEO, casp12,casp13,casp14]")
+
         parser.add_argument('--batch_size', type=int, default=4, help="batch size")
-        parser.add_argument('--load_point', type=int, default=500, help="The model load point")
+        #parser.add_argument('--load_point', type=int, default=500, help="The model load point")
         
         parser.add_argument('--n_testsamples', type=int, default=10, help="number of test samples to save")
 
